@@ -1,4 +1,4 @@
-# Extension Library for Kotlin
+# OAuth for Kotlin
 
 [![GitHub license](https://img.shields.io/github/license/kotlin/kotlinx.collections.immutable)](LICENSE.txt) 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.taetae98coding/oauth-google.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.taetae98coding/oauth-google)
