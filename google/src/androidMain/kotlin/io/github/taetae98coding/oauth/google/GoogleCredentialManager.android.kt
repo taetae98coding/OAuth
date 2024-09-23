@@ -1,10 +1,12 @@
 package io.github.taetae98coding.oauth.google
 
 import android.content.Context
+import androidx.credentials.CreateCredentialRequest
 import androidx.credentials.CredentialManager
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.exceptions.GetCredentialCancellationException
 import androidx.credentials.exceptions.GetCredentialProviderConfigurationException
+import androidx.credentials.exceptions.NoCredentialException
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import io.github.taetae98coding.oauth.google.exception.NoGoogleAccountException
@@ -30,7 +32,7 @@ public actual class GoogleCredentialManager(
             execute(request)
         } catch (exception: GetCredentialCancellationException) {
             null
-        } catch (exception: GetCredentialProviderConfigurationException) {
+        } catch (exception: NoCredentialException) {
             throw NoGoogleAccountException(cause = exception)
         }
     }
